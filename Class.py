@@ -28,3 +28,27 @@ phone2 = GamingPhone("Asus", "ROG Phone 6", 256, 6000, "Advanced Liquid Cooling"
 phone1.call("123-456-7890")
 phone2.play_game("Call of Duty")
 phone2.charge(500)
+
+
+class Vehicle:
+    def move(self):
+        pass  # Base class does nothing
+
+class Car(Vehicle):
+    def move(self):
+        print("Driving 🚗")
+
+class Plane(Vehicle):
+    def move(self):
+        print("Flying ✈️")
+
+class Boat(Vehicle):
+    def move(self):
+        print("Sailing ⛴️")
+
+# Testing polymorphism
+vehicles = [Car(), Plane(), Boat()]
+
+for v in vehicles:
+    v.move()
+
